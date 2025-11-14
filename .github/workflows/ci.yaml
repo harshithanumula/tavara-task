@@ -3,6 +3,9 @@ on:
  push:
   branches:
     - dev
+permissions:
+  contents: write  
+  pull-requests: write    
 jobs:
   mergerjob:
      runs-on: ubuntu-latest
