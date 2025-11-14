@@ -13,18 +13,17 @@ jobs:
            token: ${{ secrets.AUTH_TOKEN }}
        - name: checkout dev branch
          run: |
-          git checkout main
-          git pull origin main 
+          git checkout dev
+          git pull origin dev
        - name: checkout dev branch
          run: |
-          git fetch origin dev
-          git checkout dev
-          git pull origin dev  
+          git fetch origin main
+          git checkout main
+          git pull origin main 
        - name: operation to merge to main
          run: |
             git config user.name "harshith"
             git config user.email "harshith@github.com"
-            git fetch origin dev
             git merge origin/dev 
             gt push origin main
             
