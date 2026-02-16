@@ -3,16 +3,17 @@ on:
  push:
   branches:
     - main
+
+permissions: 
+  contents: write
 jobs:
   mergerjob:
     runs-on: ubuntu-latest
     steps:
       - name: checkout main branch
         uses: actions/checkout@v4
-        with: 
-          token: ${{ secrets.AUTH_TOKEN }}
-          fetch-depth: 0
-          persist-credentials: true
+        with:
+         fetch-depth: 0
 
       - name: operation to merge to main
         run: |
