@@ -26,4 +26,5 @@ jobs:
            git pull origin dev
            git merge origin/main --allow-unrelated-histories
            git push origin dev
+           echo " Merged changes to dev from main"
        
