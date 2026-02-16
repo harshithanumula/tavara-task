@@ -16,7 +16,7 @@ jobs:
            git config user.email "harshith@github.com"
            git fetch origin dev main
            git checkout dev
-           git pull dev
+           git pull origin dev
            git merge origin/main
            git push origin dev
             
