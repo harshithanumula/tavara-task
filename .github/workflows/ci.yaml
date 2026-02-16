@@ -2,7 +2,7 @@ name: automatically merges a child branch
 on:
  push:
   branches:
-    - dev
+    - main
 jobs:
   mergerjob:
     runs-on: ubuntu-latest
